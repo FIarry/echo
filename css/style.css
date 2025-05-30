@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(19, 19, 19);
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.postsContainer {
+    background-color: rgb(19, 19, 19);
+}
+
+.postList {
+    list-style: none;
+    padding: 0;
+    margin: 1.5%;
+    height: 100%;
+}
+
+.postItem {
+    background-color: rgb(41, 41, 41);
+    margin-top: 1.5%;
+    padding: 1%;
+}
+.postTitle {
+    font-size:x-large;
+}
+.postUser {
+    font-size: small;
+}
+.postContent {
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+}
+.postDate {
+    margin-bottom: 0.5%;
+}
+.postLink {
+    background-color: rgb(132, 132, 221);
+    border: 0;
+    font-size:small;
+    padding: 0.2%;
+}
+.postDelete {
+    background-color: rgb(221, 132, 132);
+    border: 0;
+    padding: 0.2%;
+    cursor: pointer;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    height: 3.5%;
+    display: flex;
+    background-color: rgb(41, 41, 41);
+}
+.leftSide {
+    width: 50%;
+    display: flex;
+    margin-left: 1%;
+    align-items: center;
+}
+.websiteIconContainer {
+    width: 5%;
+    height: 100%;
+    margin-right: 1.5%;
+}
+.websiteIcon {
+    width: 100%;
+    height: 100%;
+}
+.websiteTitle {
+    margin-right: 5%;
+}
+.createPostButton {
+    background-color: rgb(115, 115, 194);
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+}
+.rightSide {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 2.5%;
+}
+.loginButton {
+    background-color: rgb(132, 132, 221);
+        padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+}
+.writeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.postNameInput {
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border: 0;
+}
+.postContentInput {
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border: 0;
+    resize: none;
+}
+.postButton {
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(115, 115, 194);
+    border: 0;
+    color: white;
+}
+.pageContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pageTitle {
+    width: 80%;
+    text-align: left;
+    font-size: 250%;
+    margin-top: 1.5%;
+}
+.pageAuthor {
+    width: 80%;
+    text-align: left;
+    margin-bottom: 2.5%;
+}
+.pageContent {
+    width: 80%;
+    height: 100%;
+}
+.backBtn {
+    background-color: rgb(115, 115, 194);
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin-top: 1.5%;
+    cursor: pointer;
+    border: 0;
+    position: absolute;
+    left: 90%;
+}
+
+.loginContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.loginForm {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.loginInput {
+    width: 100%;
+    margin-bottom: 2.5%;
+    border: 0;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+.loginBtn {
+    width: 80%;
+        background-color: rgb(115, 115, 194);
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+        cursor: pointer;
+    border: 0;
+    color: white;
+}
+.accountName:hover {
+    text-decoration: line-through;
+}
