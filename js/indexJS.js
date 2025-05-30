@@ -1,3 +1,10 @@
+const categories = {
+    'travel': 'Путешествия',
+    'politics': 'Политика',
+    'food': 'Еда',
+    'media': 'Медиа',
+}
+
 function loadTasks() {
     fetch('databasePHP/get_posts.php')
         .then((response) => {
@@ -10,6 +17,7 @@ function loadTasks() {
                 const listItem = document.createElement('li')
                 const title = document.createElement('div')
                 const user = document.createElement('div')
+                const category = document.createElement('div')
                 const content = document.createElement('div')
                 const date = document.createElement('div')
                 const link = document.createElement('a')
@@ -18,6 +26,7 @@ function loadTasks() {
                 taskList.appendChild(listItem)
                 listItem.append(title)
                 listItem.append(user)
+                listItem.append(category)
                 listItem.append(content)
                 listItem.appendChild(date)
                 listItem.append(link)
@@ -25,12 +34,14 @@ function loadTasks() {
                 listItem.classList.add("postItem")
                 title.classList.add("postTitle")
                 user.classList.add("postUser")
+                user.classList.add("postUser")
                 content.classList.add("postContent")
                 date.classList.add("postDate")
                 link.classList.add("postLink")
 
                 title.innerHTML = task.title
                 user.innerHTML = task.userID
+                category.innerHTML = categories[task.category]
                 content.innerHTML = task.content
                 date.innerHTML = task.created_at
                 link.href = `post.php?id=${task.id}`
@@ -52,12 +63,12 @@ function loadTasks() {
 function deleteTask(taskID) {
     confirm("Удалить пост?")
     fetch(`databasePHP/delete_page.php?id=${taskID}`)
-    .then(()=>{
-        window.location.reload()
-    })
-    .catch((error)=>{
-        alert("Произошла ошибка")
-    })
+        .then(() => {
+            window.location.reload()
+        })
+        .catch((error) => {
+            alert("Произошла ошибка")
+        })
 }
 
 loadTasks()

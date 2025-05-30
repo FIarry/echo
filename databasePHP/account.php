@@ -15,9 +15,9 @@ if ($row) {
         $_SESSION['password'] = $password;
         $_SESSION['id'] = $row['id'];
         $conn->close();
-        header("Location: /proekt/index.php");
+        header("Location: /echo/index.php");
     } else {
-        header("Location: /proekt/login.php");
+        header("Location: /echo/login.php");
     }
 } else {
     $stmt = $conn->prepare("INSERT INTO `users`(`login`,`password`) VALUES (?,?)");
@@ -25,7 +25,6 @@ if ($row) {
     $stmt->bind_param('ss', $login, $password);
 
     if ($stmt->execute()) {
-        echo 'Пост опубликован успешно';
         $query = 'SELECT id FROM `users` WHERE login="' . $login . '" AND password="' . $password . '";';
         $curPostID = mysqli_query($conn, $query);
         $row = $curPostID->fetch_assoc();
@@ -35,7 +34,7 @@ if ($row) {
         $_SESSION['id'] = $row['id'];
         $stmt->close();
         $conn->close();
-        header("Location: /proekt/index.php");
+        header("Location: /echo/index.php");
     } else {
         echo 'Ошибка';
         $stmt->close();

@@ -14,11 +14,10 @@ if (isset($_GET['id'])) {
     }
     if ($isadmin == 1) {
         $id = mysqli_real_escape_string($conn, $_GET['id']);
-        $query = "DELETE FROM posts WHERE id = '$id'";
-        $result = mysqli_query($conn, $query);
-        $query = "DELETE FROM comments WHERE postID = '$id'";
+        $query = "DELETE FROM comments WHERE id = '$id'";
         $result = mysqli_query($conn, $query);
     }
+    header("Location: /echo/post.php?id=" . $_GET['pid']);
 };
 
 mysqli_close($conn);

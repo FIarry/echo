@@ -50,11 +50,11 @@ if ($checkAccount) {
             </div>
             <div class="rightSide">
                 <?php
-                    if (isset($_SESSION["login"])) {
-                        echo '<a href="databasePHP/logout.php" class="accountName">'.$_SESSION["login"].'</a>';
-                    } else {
-                        echo '<a href="login.php" class="loginButton">Войти в Аккаунт</a>';
-                    };
+                if (isset($_SESSION["login"])) {
+                    echo '<a href="databasePHP/logout.php" class="accountName">' . $_SESSION["login"] . '</a>';
+                } else {
+                    echo '<a href="login.php" class="loginButton">Войти в Аккаунт</a>';
+                };
                 ?>
             </div>
         </div>
@@ -63,6 +63,12 @@ if ($checkAccount) {
             <form class="writeForm" action="databasePHP/create_post.php" method="post">
                 <input type="text" name="postName" class="postNameInput" placeholder="Название Поста" required>
                 <textarea name="postContent" cols="30" rows="10" class="postContentInput" placeholder="Информация" required></textarea>
+                <select name="category" class="postNameInput">
+                    <option value="travel">Путешествия</option>
+                    <option value="politics">Политика</option>
+                    <option value="food">Еда</option>
+                    <option value="media">Медиа</option>
+                </select>
                 <button type="submit" class="postButton">Опубликовать</button>
             </form>
         </div>
